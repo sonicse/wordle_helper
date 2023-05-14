@@ -18,7 +18,7 @@ exclude = st.text_input("Не совпадающие символы:", placehold
 include = st.text_input("Совпадающие символы:", placeholder="жзиклмн..")
 
 if st.button("Варианты"):
-    words = wordle.words_gen("data/russian_nouns.txt")
+    words = wordle.words_gen("C:/Users/AAnikeev/PycharmProjects/wordle_helper/data/russian_nouns.txt")
     words = wordle.filter_words(words, exclude=exclude, include=include, chars=chars)
     words_text = "\n".join(words)
     st.text(words_text)
